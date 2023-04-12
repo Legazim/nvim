@@ -49,6 +49,8 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
+    use { 'kyazdani42/nvim-tree.lua', }           -- File explorer
+
     use { "catppuccin/nvim", as = "catppuccin", } -- Colorscheme
 
     use { "kylechui/nvim-surround" }
@@ -63,6 +65,7 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
 
     -- LSP
     use {
