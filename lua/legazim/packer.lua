@@ -51,21 +51,19 @@ return require('packer').startup(function(use)
 
     use { 'kyazdani42/nvim-tree.lua', }           -- File explorer
 
-    use { "catppuccin/nvim", as = "catppuccin", } -- Colorscheme
+    use { 'catppuccin/nvim', as = 'catppuccin', } -- Colorscheme
 
-    use { "kylechui/nvim-surround" }
+    use { 'kylechui/nvim-surround' }
     use { 'theprimeagen/harpoon' }
     use { 'mbbill/undotree' }
     use { 'lewis6991/gitsigns.nvim' }
     use { 'tpope/vim-fugitive' }
     use { 'folke/which-key.nvim' }
-    use { 'numToStr/Comment.nvim', }
+    use { 'numToStr/Comment.nvim' }
     use { 'akinsho/toggleterm.nvim' }
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
-    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+    use { 'nvim-tree/nvim-web-devicons' }
+    use { 'nvim-lualine/lualine.nvim' }
+    use { 'akinsho/bufferline.nvim' }
 
     -- LSP
     use {
