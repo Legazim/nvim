@@ -1,12 +1,20 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+vim.opt.hidden = true
+vim.opt.encoding = 'utf-8'
+vim.opt.fileencoding = 'utf-8'
+
+vim.opt.mouse = 'c'
+vim.opt.cmdheight = 2
+vim.opt.cursorline = true
+
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
-
 vim.opt.smartindent = true
+
 vim.opt.wrap = false
 
 vim.opt.list = true
@@ -15,8 +23,10 @@ vim.opt.listchars:append "space: "
 
 vim.opt.swapfile = false
 vim.opt.backup = false
--- vim.opt.undodir =  .. "/.vim/undodir"
 vim.opt.undofile = true
+
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
@@ -30,8 +40,6 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
-
--- vim.opt.clipboard = 'unnamedplus'
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '

@@ -58,6 +58,7 @@ return require('packer').startup(function(use)
     use { 'tpope/vim-fugitive' }
     use { 'folke/which-key.nvim' }
     use { 'numToStr/Comment.nvim', }
+    use { 'akinsho/toggleterm.nvim' }
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
