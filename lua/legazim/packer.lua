@@ -4,8 +4,7 @@ local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
     PACKER_BOOTSTRAP = fn.system({
-        "git",
-        "clone",
+        "git", "clone",
         "--depth",
         "1",
         "https://github.com/wbthomason/packer.nvim",
@@ -50,20 +49,19 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            vim.cmd('colorscheme rose-pine')
-        end
-    })
+    use { "catppuccin/nvim", as = "catppuccin", } -- Colorscheme
 
+    use { "kylechui/nvim-surround" }
     use { 'theprimeagen/harpoon' }
     use { 'mbbill/undotree' }
     use { 'lewis6991/gitsigns.nvim' }
     use { 'tpope/vim-fugitive' }
     use { 'folke/which-key.nvim' }
     use { 'numToStr/Comment.nvim', }
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 
     -- LSP
     use {
