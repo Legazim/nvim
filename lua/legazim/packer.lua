@@ -49,10 +49,10 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use { 'kyazdani42/nvim-tree.lua', }           -- File explorer
+    -- use { 'kyazdani42/nvim-tree.lua', }           -- File explorer
 
     use { 'catppuccin/nvim', as = 'catppuccin', } -- Colorscheme
-
+    use { 'folke/tokyonight.nvim' }               -- Colorscheme
     use { 'kylechui/nvim-surround' }
     use { 'theprimeagen/harpoon' }
     use { 'mbbill/undotree' }
@@ -64,6 +64,13 @@ return require('packer').startup(function(use)
     use { 'nvim-tree/nvim-web-devicons' }
     use { 'nvim-lualine/lualine.nvim' }
     use { 'akinsho/bufferline.nvim' }
+    use { 'folke/trouble.nvim' }
+    use { 'RRethy/vim-illuminate' }
+    use { "utilyre/barbecue.nvim",
+        requires = {
+            "SmiteshP/nvim-navic",
+        },
+    }
 
     -- LSP
     use {

@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeToggle)
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeToggle)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Move line up and down in NORMAL and VISUAL modes
 vim.keymap.set('n', '<M-j>', ':move .+1<CR>')
@@ -12,8 +12,9 @@ vim.keymap.set('x', '<M-k>', ":move '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "n", "nzz")
+vim.keymap.set("n", "N", "Nzz")
+vim.keymap.set("n", "*", "*Nzz")
 
 -- Shortcut to normal mode
 vim.keymap.set('i', 'jk', '<ESC>')
@@ -64,12 +65,15 @@ vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
 
 -- Buffer navigation
-vim.keymap.set('n', '<m-l>', ':bn<Cr>')
-vim.keymap.set('n', '<m-h>', ':bp<Cr>')
+vim.keymap.set('n', '<m-l>', ':bn<CR>')
+vim.keymap.set('n', '<m-h>', ':bp<CR>')
+vim.keymap.set('n', '<m-q>', ':bd<CR>')
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+vim.keymap.set('n', '<leader>py<leader>', "<cmd>py vim.fn.expand('%:p'))<CR>")
 
 -- Fix problem where <C-z> freezes the terminal (in windows powershell)
 local function CtrlZ()

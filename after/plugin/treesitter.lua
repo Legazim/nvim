@@ -1,5 +1,16 @@
 require('nvim-treesitter.configs').setup({
-    ensure_installed = { "javascript", "typescript", "c", "lua", "vim", "rust", "query" },
+    ensure_installed = {
+        "javascript",
+        "typescript",
+        "html",
+        "php",
+        "rust",
+        "c",
+        "lua",
+        "vim",
+        "vimdoc",
+        "query",
+    },
     sync_install = false,
     -- Automatically install missing parsers when entering buffer
     -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
@@ -10,7 +21,14 @@ require('nvim-treesitter.configs').setup({
         additional_vim_regex_highlighting = false,
     },
     autopairs = { enable = true },
-    indent = { enable = true, disable = { "python", "css", "html" } },
+    indent = {
+        enable = true,
+        disable = {
+            "python",
+            "css",
+            "html"
+        }
+    },
     rainbow = {
         enable = true,
     },
