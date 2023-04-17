@@ -52,7 +52,8 @@ return require('packer').startup(function(use)
     -- use { 'kyazdani42/nvim-tree.lua', }           -- File explorer
 
     use { 'catppuccin/nvim', as = 'catppuccin', } -- Colorscheme
-    use { 'folke/tokyonight.nvim' }               -- Colorscheme
+    -- use { 'folke/tokyonight.nvim' }               -- Colorscheme
+    use { 'nvim-tree/nvim-tree.lua' }
     use { 'kylechui/nvim-surround' }
     use { 'theprimeagen/harpoon' }
     use { 'mbbill/undotree' }
