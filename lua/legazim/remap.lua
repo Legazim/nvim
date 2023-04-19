@@ -50,8 +50,6 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/AppData/Local/nvim/lua/legazim/packer.lua<CR>");
-
 -- Use Alt + hjkl to resize windows
 vim.keymap.set('n', '<M-Down>', ':resize -2<CR>')
 vim.keymap.set('n', '<M-Up>', ':resize +2<CR>')
@@ -73,14 +71,23 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
-vim.keymap.set('n', '<leader>py<leader>', "<cmd>py vim.fn.expand('%:p'))<CR>")
+-- if vim.fn.has('win32') then
+--     return "e ~/AppData/Local/nvim/lua/legazim/plugins.lua"
+-- else
+--     return "e ~/.config/nvim/lua/legazim/plugins.lua"
+-- end
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/AppData/Local/nvim/lua/legazim/plugins.lua<CR>");
+
+vim.keymap.set('n', '<F5>', "<cmd>!%:p<CR>")
+vim.keymap.set('n', '<leader><F5>', function()
+    vim.cmd("!" .. vim.fn.input("Command > ") .. " %:p")
+end)
 
 -- Fix problem where <C-z> freezes the terminal (in windows powershell)
-local function CtrlZ()
+vim.keymap.set('', '<C-z>', function()
     if vim.fn.has('win32') then
         return '<nop>'
     else
         return '<C-z>'
     end
-end
-vim.keymap.set('', '<C-z>', CtrlZ())
+end)
