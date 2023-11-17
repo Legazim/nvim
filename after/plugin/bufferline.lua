@@ -3,7 +3,7 @@ require('bufferline').setup({
         separator_style = 'thin',
         diagnostics = 'nvim_lsp',
         diagnostics_indicator = function(count, level)
-            local icon = level:match("error") and " " or ""
+            local icon = level:match("error") and " " or " "
             return ' ' .. icon .. count
         end,
         numbers = 'ordinal',
@@ -19,13 +19,3 @@ require('bufferline').setup({
 })
 
 vim.keymap.set('n', '<leader>bp', ':BufferLineTogglePin<cr>', { silent = true })
-vim.keymap.set('n', '<leader>b1', ':lua require("bufferline").go_to_buffer(1, true)<cr>', { silent = true })
-vim.keymap.set('n', '<leader>b2', ':lua require("bufferline").go_to_buffer(2, true)<cr>', { silent = true })
-vim.keymap.set('n', '<leader>b3', ':lua require("bufferline").go_to_buffer(3, true)<cr>', { silent = true })
-vim.keymap.set('n', '<leader>b4', ':lua require("bufferline").go_to_buffer(4, true)<cr>', { silent = true })
-vim.keymap.set('n', '<leader>b5', ':lua require("bufferline").go_to_buffer(5, true)<cr>', { silent = true })
-vim.keymap.set('n', '<leader>b6', ':lua require("bufferline").go_to_buffer(6, true)<cr>', { silent = true })
-vim.keymap.set('n', '<leader>b7', ':lua require("bufferline").go_to_buffer(7, true)<cr>', { silent = true })
-vim.keymap.set('n', '<leader>b8', ':lua require("bufferline").go_to_buffer(8, true)<cr>', { silent = true })
-vim.keymap.set('n', '<leader>b9', ':lua require("bufferline").go_to_buffer(9, true)<cr>', { silent = true })
-vim.keymap.set('n', '<leader>b-1', ':lua require("bufferline").go_to_buffer(-1, true)<cr>', { silent = true })

@@ -4,8 +4,8 @@ require('nvim-treesitter.configs').setup({
         "typescript",
         "tsx",
         "rust",
-        "c",
         "lua",
+        "c",
         "vim",
         "vimdoc",
         "query",
@@ -44,13 +44,13 @@ require('nvim-treesitter.configs').setup({
     },
 })
 
-require("indent_blankline").setup {
-    char = '▏',
-    context_char = '▏',
-    space_char_blankline = " ",
-    show_current_context = true,
-    show_current_context_start = true,
-}
+-- require("indent_blankline").setup {
+--     char = '▏',
+--     context_char = '▏',
+--     space_char_blankline = " ",
+--     show_current_context = true,
+--     show_current_context_start = true,
+-- }
 
 require("nvim-autopairs").setup()
 

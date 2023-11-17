@@ -12,45 +12,50 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-    'nvim-treesitter/playground',
-    'nvim-telescope/telescope.nvim',
-    'nvim-lua/plenary.nvim',
+    'nvim-lua/plenary.nvim', -- Usefull functions
+
+    -- Treesitter
+    'nvim-treesitter/playground', 
+
+    -- Navigation
+    'nvim-telescope/telescope.nvim', -- Telescope
+
+    -- Visual
     { 'catppuccin/nvim', lazy = false }, -- Colorscheme
-    'kylechui/nvim-surround',
-    'theprimeagen/harpoon',
-    'mbbill/undotree',
-    'lewis6991/gitsigns.nvim',
-    'tpope/vim-fugitive',
     'folke/which-key.nvim',
-    'numToStr/Comment.nvim',
-    'akinsho/toggleterm.nvim',
-    'nvim-tree/nvim-web-devicons',
+    'nvim-tree/nvim-web-devicons', 
     'nvim-lualine/lualine.nvim',
     'akinsho/bufferline.nvim',
-    'folke/trouble.nvim',
     'RRethy/vim-illuminate',
+
+    -- Shortcuts
+    'kylechui/nvim-surround',
+    'theprimeagen/harpoon',
+    'numToStr/Comment.nvim',
+    'akinsho/toggleterm.nvim',
+
+    'mbbill/undotree', -- Undo tree
+
+    -- Git integration
+    'tpope/vim-fugitive',
+    'lewis6991/gitsigns.nvim',
+
+    -- LSP extras
+    'folke/trouble.nvim',
     {
         "utilyre/barbecue.nvim",
         dependencies = { "SmiteshP/nvim-navic", }
     },
-    {
-        'VonHeikemen/lsp-zero.nvim',
-        dependencies = {
-            { 'neovim/nvim-lspconfig' }, -- Required
-            {
-                'williamboman/mason.nvim',
-                init = function()
-                    pcall(vim.cmd, 'MasonUpdate')
-                end,
-            },
-            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },     -- Required
-            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' },     -- Required
-        }
-    },
+    -- LSP
+    {'williamboman/mason.nvim'},
+    {'williamboman/mason-lspconfig.nvim'},
+
+    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+    {'neovim/nvim-lspconfig'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/nvim-cmp'},
+    {'L3MON4D3/LuaSnip'},
 
     -- Treesitter
     'nvim-treesitter/nvim-treesitter',
