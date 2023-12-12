@@ -25,7 +25,6 @@ local plugins = {
     'folke/which-key.nvim',
     'nvim-tree/nvim-web-devicons', 
     'nvim-lualine/lualine.nvim',
-    'akinsho/bufferline.nvim',
     'RRethy/vim-illuminate',
 
     -- Shortcuts
