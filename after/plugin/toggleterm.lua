@@ -2,7 +2,7 @@
 
 require("toggleterm").setup {
     size = 22,
-    open_mapping = [[<C-\'>]],
+    open_mapping = [[<C-t>]],
     shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell",
     -- let &shell = has('win32') ? 'powershell' : 'pwsh'
     hide_numbers = true,    -- hide the number column in toggleterm buffers

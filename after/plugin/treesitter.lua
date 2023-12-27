@@ -2,6 +2,10 @@ require('nvim-treesitter.configs').setup({
     ensure_installed = {
         "javascript",
         "typescript",
+        "html",
+        "css",
+        "xml",
+        "php",
         "tsx",
         "rust",
         "lua",
@@ -16,46 +20,33 @@ require('nvim-treesitter.configs').setup({
     -- auto_install = true,
     highlight = {
         enable = true,
-        disable = { "css" },
+        -- disable = { "css" },
         additional_vim_regex_highlighting = false,
     },
     autopairs = { enable = true },
-    indent = {
-        enable = true,
-        disable = {
-            "python",
-        }
-    },
     rainbow = {
         enable = true,
+        disable = { "html" }
     },
-    -- autotag = { enable = true, },
-    context_commentstring = {
-        enable = true,
-        config = {
-            javascript = {
-                __default = '// %s',
-                jsx_element = '{/* %s */}',
-                jsx_fragment = '{/* %s */}',
-                jsx_attribute = '// %s',
-                comment = '// %s'
-            }
-        }
-    },
+    autotag = { enable = true, },
 })
 
--- require("indent_blankline").setup {
---     char = '▏',
---     context_char = '▏',
---     space_char_blankline = " ",
---     show_current_context = true,
---     show_current_context_start = true,
--- }
+-- Indent blank line
+require("ibl").setup {}
 
-require("nvim-autopairs").setup()
+require('treesitter-context').setup({
+    enable = true,
+    disable = { "css" },
+    max_lines = 4,
+})
 
-require('treesitter-context').setup()
+require 'nvim-treesitter.configs'.setup {
+    autotag = {
+        enable = true,
+    }
+}
 
+-- Rainbow pairs
 vim.cmd([[ autocmd FileType * highlight rainbowcol1 guifg=#ffd700]])
 vim.cmd([[ autocmd FileType * highlight rainbowcol2 guifg=#da70d6]])
 vim.cmd([[ autocmd FileType * highlight rainbowcol3 guifg=#87cefa]])

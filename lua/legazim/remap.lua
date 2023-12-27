@@ -71,11 +71,6 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
--- if vim.fn.has('win32') then
---     return "e ~/AppData/Local/nvim/lua/legazim/plugins.lua"
--- else
---     return "e ~/.config/nvim/lua/legazim/plugins.lua"
--- end
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/AppData/Local/nvim/lua/legazim/plugins.lua<CR>");
 
 vim.keymap.set('n', '<F5>', "<cmd>!%:p<CR>")

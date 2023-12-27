@@ -2,6 +2,10 @@ local cmp = require('cmp')
 -- local cmp_action = require('lsp-zero').cmp_action()
 local luasnip = require("luasnip")
 
+require("luasnip.loaders.from_vscode").lazy_load({
+    paths = vim.fn.stdpath("config") .. "/snippets",
+})
+
 --   פּ ﯟ   some other good icons
 local kind_icons = {
      Text = "󰉿",

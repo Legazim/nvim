@@ -15,7 +15,7 @@ local plugins = {
     'nvim-lua/plenary.nvim', -- Usefull functions
 
     -- Treesitter
-    'nvim-treesitter/playground', 
+    'nvim-treesitter/playground',
 
     -- Navigation
     'nvim-telescope/telescope.nvim', -- Telescope
@@ -23,7 +23,7 @@ local plugins = {
     -- Visual
     { 'catppuccin/nvim', lazy = false }, -- Colorscheme
     'folke/which-key.nvim',
-    'nvim-tree/nvim-web-devicons', 
+    'nvim-tree/nvim-web-devicons',
     'nvim-lualine/lualine.nvim',
     'RRethy/vim-illuminate',
 
@@ -47,14 +47,14 @@ local plugins = {
     },
 
     -- LSP
-    {'williamboman/mason.nvim'},
-    {'williamboman/mason-lspconfig.nvim'},
+    { 'williamboman/mason.nvim' },
+    { 'williamboman/mason-lspconfig.nvim' },
 
-    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-    {'neovim/nvim-lspconfig'},
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'hrsh7th/nvim-cmp'},
-    {'L3MON4D3/LuaSnip'},
+    { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
+    { 'neovim/nvim-lspconfig' },
+    { 'hrsh7th/cmp-nvim-lsp' },
+    { 'hrsh7th/nvim-cmp' },
+    { 'L3MON4D3/LuaSnip' },
 
     -- Treesitter
     'nvim-treesitter/nvim-treesitter',
